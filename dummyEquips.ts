@@ -9,7 +9,7 @@ export type Equipment = {
   description: string;
 };
 
-export const dummyData: Equipment[] = [
+export const dummyEquip: Equipment[] = [
   {
     id: "1",
     name: "Excavator",
