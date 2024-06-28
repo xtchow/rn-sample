@@ -1,0 +1,129 @@
+{
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "prettier"
+    ],
+    "overrides": [
+        {
+          "files": ["*.d.ts"],
+          "rules": {
+            "no-unused-vars": "off",
+            "unused-imports/no-unused-vars": "off"
+          }
+        }
+      ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+    //   "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project": "./tsconfig.json",
+    //   ?
+      "tsconfigRootDir": "__dirname",
+      "ecmaVersion": "latest"
+    //   "sourceType": "module",
+    },
+    "ignorePatterns": ["*.eslintrc.js"],
+    "plugins": [
+      "react",
+      "react-hooks",
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "react/prop-types": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "react/react-in-jsx-scope": "off", // Disable the rule
+      "prefer-const": "warn",
+      "no-extra-semi": "warn",
+      "no-empty": "off",
+      "no-useless-escape": "warn",
+      "no-constant-condition": "off",
+      "no-console": "warn",
+      "no-case-declarations": "off",
+      "no-unused-vars": "off",
+      "no-restricted-syntax": ["error", {
+        "selector": "ExportDefaultDeclaration",
+        "message": "Prefer named exports"
+      }],
+      "@typescript-eslint/no-unused-vars": "off",
+      "unused-imports/no-unused-imports": "warn",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          "varsIgnorePattern": "^_",
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "@typescript-eslint/no-unsafe-assignment": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-unsafe-argument": "off",
+      "@typescript-eslint/no-unsafe-return": "off",
+      "@typescript-eslint/no-unsafe-call": "off",
+      "@typescript-eslint/no-floating-promises": "off",
+      "@typescript-eslint/no-misused-promises": "off",
+      "@typescript-eslint/no-unnecessary-type-assertion": "warn",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/ban-types": [
+        "error",
+        {
+          "types": {
+            "Function": false,
+            "{}": false
+          }
+        }
+      ],
+      "@typescript-eslint/unbound-method": "off",
+      "@typescript-eslint/switch-exhaustiveness-check": "error",
+      "@typescript-eslint/prefer-for-of": "warn",
+      "@typescript-eslint/prefer-nullish-coalescing": [
+        "warn",
+        {
+          "ignorePrimitives": { "boolean": true }
+        }
+      ],
+      "@typescript-eslint/prefer-optional-chain": "warn",
+      "react/no-unescaped-entities": "off",
+      "react/jsx-no-target-blank": "off",
+    //   "react/prop-types": "off",
+      "mobx/exhaustive-make-observable": "warn",
+      "mobx/unconditional-make-observable": "error",
+      "mobx/missing-make-observable": "error",
+    //   "react/react-in-jsx-scope": "off",
+      "react-hooks/exhaustive-deps": "off",
+      "@seiyab/react-hooks/exhaustive-deps": [
+        "warn",
+        {
+          "ignoreThisDependency": "props"
+        }
+      ],
+      "import/no-cycle": "warn",
+      "import/no-duplicates": "off",
+      "import/no-named-as-default": "off"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      },
+      "import/resolver": {
+        "typescript": true,
+        "node": true
+      }
+    }
+  }
+  

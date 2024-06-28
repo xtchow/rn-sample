@@ -17,3 +17,9 @@ this began with [`npx create-expo-app --template`](https://reactnative.dev/docs/
     git push -u origin main
     ```
 
+regarding Prettier and ESLint with heavy influence copy from aquaman:
+  - ```
+    npm install --save-dev prettier eslint eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-react eslint-plugin-react-hooks
+    ```
+  - created `.prettierrc.json`
+  - created `.eslintrc.json`

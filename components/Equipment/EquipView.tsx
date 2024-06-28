@@ -45,7 +45,7 @@ export function EquipView() {
       <View style={styles.equipInput}>
         <TextInput
           style={{ fontSize: 16 }}
-          placeholder='Search here...'
+          placeholder="Search here..."
           // this should be determined by no results
           // maxLength
 
@@ -53,38 +53,37 @@ export function EquipView() {
           value={checkInput()}
         />
         <TouchableOpacity onPress={() => setClearSearch(true)}>
-          <Text style={{color: 'gray'}}>X</Text>
+          <Text style={{ color: 'gray' }}>X</Text>
         </TouchableOpacity>
       </View>
 
-      {empty && <Text style={{marginTop: 16, fontSize: 16}}>No results found.</Text>}
+      {/* TODO: this still appears after clearing search bar */}
+      {empty && <Text style={{ marginTop: 16, fontSize: 16 }}>No results found.</Text>}
       <FlatList
         style={styles.equipResults}
         data={results}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item: { id, name, category, price, availability, description }, index }) => {
-
+        keyExtractor={item => item.id}
+        renderItem={({ item: { name, price, availability, description }, index }) => {
           return (
             <View style={styles.equipItem}>
-
               <View style={styles.equipHeader}>
                 <Text style={{ fontSize: 16, fontWeight: 'bold' }}>{name}</Text>
                 <Text style={{ ...styles.caption, textAlign: 'center' }}>{description}</Text>
-
               </View>
 
               <View style={styles.equipInfo}>
-                <Text style={{ fontStyle: 'italic'}}>${price.toLocaleString()}</Text>
+                <Text style={{ fontStyle: 'italic' }}>${price.toLocaleString()}</Text>
 
                 <View style={styles.equipStock}>
                   {availability === 'In Stock' && <Text style={{ ...styles.caption, color: 'green' }}>{availability}</Text>}
                   {availability === 'Limited Stock' && <Text style={{ ...styles.caption, color: 'orange' }}>{availability}</Text>}
                   {availability === 'Out of Stock' && <Text style={{ ...styles.caption, color: 'red' }}>{availability}</Text>}
 
-                  {availability !== 'Out of Stock' && <TouchableOpacity onPress={() => addEquip(index)}>
-                    <Text style={styles.equipAddBtn}>Add to Cart</Text>
-                  </TouchableOpacity>}
-                  
+                  {availability !== 'Out of Stock' && (
+                    <TouchableOpacity onPress={() => addEquip(index)}>
+                      <Text style={styles.equipAddBtn}>Add to Cart</Text>
+                    </TouchableOpacity>
+                  )}
                 </View>
               </View>
 
@@ -158,5 +157,5 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 4,
     borderColor: '#cccccc',
-  }
+  },
 });
