@@ -8,24 +8,30 @@ export function EquipView() {
   const [clearSearch, setClearSearch] = useState(false);
 
   const [results, setResults] = useState(dummyEquip);
-  const [empty, setEmpty] = useState(results.length === 0);
+  const [isEmpty, setIsEmpty] = useState(results.length === 0);
   // TODO: create a count of this on cart icon
   const [cart, setCart] = useState<Equipment[]>([]);
 
   function searchEquip(input: string) {
+    // TODO: remove starting and trailling spaces
     setSearch(input);
 
-    setResults(dummyEquip.filter((equip) => {
+    const newResults = dummyEquip.filter((equip) => {
       return equip.name.toLowerCase().includes(input.toLowerCase());
-    }));
-    if (results.length === 0) setEmpty(true);
+    });
+    setResults(newResults);
+
+    if (newResults.length === 0) {
+      setIsEmpty(true);
+    }
   }
 
   function checkInput() {
     if (clearSearch) {
       setSearch('');
       setResults(dummyEquip);
-      setEmpty(results.length === 0);
+      // TODO: somewhere needs to make sure that the original data is never empty?
+      setIsEmpty(false);
       setClearSearch(false);
     }
     return search;
@@ -37,8 +43,10 @@ export function EquipView() {
   }
 
   useEffect(() => {
-    if (results.length === 0) setEmpty(true);
-  }, [results]);
+    if (results.length === 0) {
+      setIsEmpty(true);
+    }
+  }, [results, setIsEmpty]);
 
   return (
     <>
@@ -58,7 +66,7 @@ export function EquipView() {
       </View>
 
       {/* TODO: this still appears after clearing search bar */}
-      {empty && <Text style={{ marginTop: 16, fontSize: 16 }}>No results found.</Text>}
+      {isEmpty && <Text style={{ marginTop: 16, fontSize: 16 }}>No results found.</Text>}
       <FlatList
         style={styles.equipResults}
         data={results}
