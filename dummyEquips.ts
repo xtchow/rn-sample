@@ -7,6 +7,8 @@ export type Equipment = {
   price: number;
   availability: "In Stock" | "Out of Stock" | "Limited Stock";
   description: string;
+
+  count: number;
 };
 
 export const dummyEquip: Equipment[] = [
@@ -17,6 +19,7 @@ export const dummyEquip: Equipment[] = [
     price: 75000,
     availability: "In Stock",
     description: "A large machine used for digging and moving earth.",
+    count: 0,
   },
   {
     id: "2",
@@ -25,6 +28,7 @@ export const dummyEquip: Equipment[] = [
     price: 12000,
     availability: "Out of Stock",
     description: "A machine that mixes cement, aggregates, and water to form concrete.",
+    count: 0,
   },
   {
     id: "3",
@@ -33,6 +37,7 @@ export const dummyEquip: Equipment[] = [
     price: 85000,
     availability: "In Stock",
     description: "A powerful machine for pushing large quantities of soil, sand, and rubble.",
+    count: 0,
   },
   {
     id: "4",
@@ -41,6 +46,7 @@ export const dummyEquip: Equipment[] = [
     price: 5000,
     availability: "In Stock",
     description: "Temporary structure used to support workers and materials during construction.",
+    count: 0,
   },
   {
     id: "5",
@@ -49,6 +55,7 @@ export const dummyEquip: Equipment[] = [
     price: 150000,
     availability: "Limited Stock",
     description: "A tall machine used for lifting and moving heavy objects.",
+    count: 0,
   },
   {
     id: "6",
@@ -57,6 +64,7 @@ export const dummyEquip: Equipment[] = [
     price: 3000,
     availability: "In Stock",
     description: "A portable drill used for breaking up concrete and asphalt.",
+    count: 0,
   },
   {
     id: "7",
@@ -65,6 +73,7 @@ export const dummyEquip: Equipment[] = [
     price: 200,
     availability: "In Stock",
     description: "A small cart with a single wheel used for carrying loads.",
+    count: 0,
   },
   {
     id: "8",
@@ -73,6 +82,7 @@ export const dummyEquip: Equipment[] = [
     price: 150,
     availability: "Out of Stock",
     description: "A portable device used for climbing up or down.",
+    count: 0,
   },
   {
     id: "9",
@@ -81,6 +91,7 @@ export const dummyEquip: Equipment[] = [
     price: 50,
     availability: "In Stock",
     description: "Protective headgear to ensure safety on construction sites.",
+    count: 0,
   },
   {
     id: "10",
@@ -89,6 +100,7 @@ export const dummyEquip: Equipment[] = [
     price: 25,
     availability: "In Stock",
     description: "High-visibility clothing to ensure worker safety.",
+    count: 0,
   },
   {
     id: "11",
@@ -97,6 +109,7 @@ export const dummyEquip: Equipment[] = [
     price: 55000,
     availability: "In Stock",
     description: "A versatile machine used for digging and loading.",
+    count: 0,
   },
   {
     id: "12",
@@ -105,6 +118,7 @@ export const dummyEquip: Equipment[] = [
     price: 90000,
     availability: "In Stock",
     description: "A truck used for transporting loose materials.",
+    count: 0,
   },
   {
     id: "13",
@@ -113,6 +127,7 @@ export const dummyEquip: Equipment[] = [
     price: 30000,
     availability: "In Stock",
     description: "A vehicle with a pronged device for lifting and carrying loads.",
+    count: 0,
   },
   {
     id: "14",
@@ -121,6 +136,7 @@ export const dummyEquip: Equipment[] = [
     price: 7000,
     availability: "In Stock",
     description: "A machine used for compacting soil, gravel, and asphalt.",
+    count: 0,
   },
   {
     id: "15",
@@ -129,6 +145,7 @@ export const dummyEquip: Equipment[] = [
     price: 2500,
     availability: "In Stock",
     description: "A device that converts power into potential energy stored in compressed air.",
+    count: 0,
   },
   {
     id: "16",
@@ -137,6 +154,7 @@ export const dummyEquip: Equipment[] = [
     price: 40000,
     availability: "In Stock",
     description: "A machine used for transferring liquid concrete by pumping.",
+    count: 0,
   },
   {
     id: "17",
@@ -145,6 +163,7 @@ export const dummyEquip: Equipment[] = [
     price: 1500,
     availability: "In Stock",
     description: "A device that converts mechanical energy to electrical energy.",
+    count: 0,
   },
   {
     id: "18",
@@ -153,6 +172,7 @@ export const dummyEquip: Equipment[] = [
     price: 300,
     availability: "In Stock",
     description: "A tool used to drive nails into wood or other materials.",
+    count: 0,
   },
   {
     id: "19",
@@ -161,6 +181,7 @@ export const dummyEquip: Equipment[] = [
     price: 500,
     availability: "In Stock",
     description: "A device used to spray paint on surfaces.",
+    count: 0,
   },
   {
     id: "20",
@@ -169,6 +190,7 @@ export const dummyEquip: Equipment[] = [
     price: 150,
     availability: "In Stock",
     description: "A tool fitted with a cutting tool attachment for drilling holes.",
+    count: 0,
   },
 
 ];
