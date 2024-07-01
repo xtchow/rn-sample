@@ -1,11 +1,11 @@
 import { StyleSheet, View } from 'react-native';
-import { EquipView } from './components/Equipment/EquipView';
+import { Home } from './components/Home';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-      <EquipView />
+      <Home />
 
       {/* <StatusBar style="auto" /> */}
     </View>

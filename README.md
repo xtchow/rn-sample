@@ -1,7 +1,9 @@
 sample for a construction company to sell equipment
 
 OBJECTIVES
-  - replicate *rn-course*'s half-baked "Search for an application" feature here using chatgpt's dummy data
+  - create a modal which displays cart contents and leads to a checkout page
+  COMPLETED
+    - replicate *rn-course*'s half-baked "Search for an application" feature here using chatgpt's dummy data
 
 HELPFUL LINKS
   - https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
