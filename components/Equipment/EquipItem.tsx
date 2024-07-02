@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { Equipment } from "../../dummyEquips";
+import { master } from "../../master";
 
 
 interface EquipItemProps {
@@ -12,7 +13,7 @@ export function EquipItem({ item: { id, name, description, price, availability, 
   return (
     <View style={styles.equipItem}>
       <View style={styles.equipHeader}>
-        <Text style={{ fontSize: 16, fontWeight: 'bold' }}>{name}</Text>
+        <Text style={{ ...master.body, fontWeight: 'bold' }}>{name}</Text>
         <Text style={{ ...styles.caption, textAlign: 'center' }}>{description}</Text>
       </View>
 
@@ -41,8 +42,8 @@ export function EquipItem({ item: { id, name, description, price, availability, 
 
 const styles = StyleSheet.create({
   caption: {
+    ...master.second,
     margin: 4,
-    fontSize: 14,
   },
 
   equipItem: {

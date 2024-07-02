@@ -2,6 +2,7 @@ import { FlatList, StyleSheet, Text, TextInput, TouchableOpacity, View } from "r
 import { Equipment, dummyEquip } from "../../dummyEquips";
 import { useEffect, useState } from "react";
 import { EquipItem } from "./EquipItem";
+import { master } from "../../master";
 
 interface EquipViewProps {
   addEquip: (id: string) => void;
@@ -51,7 +52,7 @@ export function EquipView({ addEquip, removeEquip }: EquipViewProps) {
     <>
       <View style={styles.equipInput}>
         <TextInput
-          style={{ fontSize: 16 }}
+          style={master.body}
           placeholder="Search here..."
           // this should be determined by no results
           // maxLength
@@ -86,11 +87,6 @@ export function EquipView({ addEquip, removeEquip }: EquipViewProps) {
 
 
 const styles = StyleSheet.create({
-  caption: {
-    margin: 4,
-    fontSize: 14,
-  },
-
   equipInput: {
     marginTop: '20%',
     padding: 4,
@@ -104,7 +100,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#cccccc',
 
-    // fontSize: 160,
   },
 
 
